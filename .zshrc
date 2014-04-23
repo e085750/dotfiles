@@ -35,3 +35,5 @@ export PATH=$PATH:$ANT_HOME/bin
 export JAVA_HOME=/usr/lib/jvm/default-java
 
 alias mv="mv -b"
+
+:syntax on 

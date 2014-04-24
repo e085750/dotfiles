@@ -36,4 +36,8 @@ export JAVA_HOME=/usr/lib/jvm/default-java
 
 alias mv="mv -b"
 
-:syntax on 
+alias cp="cp -i"
+
+alias pd="popd"
+
+setopt auto_pushd

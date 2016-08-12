@@ -38,7 +38,8 @@ export JRE_HOME=/usr/bin/java
 alias mv="mv -b"
 
 alias cp="cp -i"
-
+alias ll="ls -la --color=auto"
+alias ls="ls --color=auto"
 alias pd="popd"
 
 setopt auto_pushd

@@ -2,7 +2,7 @@ set tabstop=2
 set autoindent
 set expandtab
 set shiftwidth=2
-set hlserch
+set hlsearch
 
 "ノーマルモードの<C-^>を無効化
 nnoremap <silent> <C-^> <Nop>

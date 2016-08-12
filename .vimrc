@@ -13,26 +13,6 @@ if has('multi_byte_ime')
   highlight CursorIM guifg=NONE guibg=#ecbcbc
 endif
 
-"### Tera TermでIME制御
-"" http://ttssh2.sourceforge.jp/manual/ja/usage/tips/vim.html
-"## 挿入モードから抜けた時に IME をオフにし、再度挿入モードに入った時に IME
-"の状態を元に戻す
-"let &t_SI .= "\e[<r"
-"let &t_EI .= "\e[<s\e[<0t"
-"let &t_te .= "\e[<0t\e[<s"
-"set timeoutlen=100
-""## 挿入モードでの ESC キーを押した後の待ちを無くす
-"let &t_SI .= "\e[?7727h"
-"let &t_EI .= "\e[?7727l"
-inoremap <special> <Esc>O[ <Esc>
-"## GNU Screenとの併用
-if &term == "screen"
-let &t_SI .= "\eP\e[3 q\e\\"
-let &t_EI .= "\eP\e[1 q\e\\"
-else
-"let &t_SI .= "\e[3 q"
-"let &t_EI .= "\e[1 q"
-endif
 
 "### gVim IME常時無効化設定
 " http://blog.blueblack.net/item_393
@@ -50,26 +30,6 @@ highlight CursorIM guifg=NONE guibg=#ecbcbc
 endif
 
 syntax enable
-
-if &term =~ "xterm"
-let &t_ti .= "\e[?2004h"
-let &t_te .= "\e[?2004l"
-let &pastetoggle = "\e[201~"
-
-  function XTermPasteBegin(ret)
-  set paste
-  return a:ret
-  endfunction
-
-  noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
-  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
-  cnoremap <special> <Esc>[200~ <nop>
-  cnoremap <special> <Esc>[201~ <nop>
-endif
-
-let &t_SI .= "\e[<r"
-let &t_EI .= "\e[<s\e[<0t"
-let &t_te .= "\e[<0t\e[<s"
 
 set timeoutlen=100
 

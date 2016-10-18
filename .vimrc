@@ -3,6 +3,7 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set hlsearch
+set paste
 
 "ノーマルモードの<C-^>を無効化
 nnoremap <silent> <C-^> <Nop>

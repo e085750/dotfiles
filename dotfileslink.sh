@@ -1,4 +1,4 @@
 #! /bin/bash
 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s `cd $(dirname $0) && pwd`/.vimrc ~/.vimrc
+ln -s `cd $(dirname $0) && pwd`/.zshrc ~/.zshrc

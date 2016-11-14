@@ -30,8 +30,6 @@ gui=bold
 highlight CursorIM guifg=NONE guibg=#ecbcbc
 endif
 
-syntax enable
-
 set timeoutlen=100
 
 "dein Scripts-----------------------------
@@ -57,10 +55,17 @@ call dein#add('Shougo/neosnippet-snippets')
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 call dein#add('Shougo/vimshell')
 
+":Unite {file,file_mru}
+"^{p,n}, tab, enter
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/neomru.vim')
+
+"required lua. $vim --version | grep lua
 call dein#add('Shougo/neocomplete')
+
+"color scheme
 call dein#add('tomasr/molokai')
+
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic')
 
@@ -78,3 +83,7 @@ syntax enable
 
 "End dein Scripts-------------------------
 
+syntax on
+autocmd colorscheme molokai highlight Visual ctermbg=8
+colorscheme molokai
+set t_Co=256

@@ -1,7 +1,7 @@
-set tabstop=2
+set tabstop=4
 set autoindent
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set hlsearch
 set paste
 
@@ -66,8 +66,21 @@ call dein#add('Shougo/neocomplete')
 "color scheme
 call dein#add('tomasr/molokai')
 
+":NERDTreeToggle
+"l, i, t, s
 call dein#add('scrooloose/nerdtree')
+
+":Errors
 call dein#add('scrooloose/syntastic')
+
+"
+call dein#add('justmao945/vim-clangyntastic')
+
+"
+call dein#add('Shougo/neocomplete.vim')
+
+"
+call dein#add('Shougo/neoinclude.vim')
 
 " Required:
 call dein#end()

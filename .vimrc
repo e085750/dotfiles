@@ -11,6 +11,8 @@ set hidden
 set number
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
+set mousemodel=popup
+
 
 "ノーマルモードの<C-^>を無効化
 nnoremap <silent> <C-^> <Nop>
@@ -76,6 +78,8 @@ call dein#add('scrooloose/nerdtree')
 
 ":Errors
 call dein#add('scrooloose/syntastic')
+let g:syntastic_cpp_compiler="gcc"
+let g:syntastic_cpp_compiler_options=" -std=c++11" 
 
 "
 call dein#add('justmao945/vim-clang')

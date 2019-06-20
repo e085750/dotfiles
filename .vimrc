@@ -1,4 +1,4 @@
-set tabstop=8
+set tabstop=4
 set autoindent
 set expandtab
 set shiftwidth=4
@@ -232,3 +232,4 @@ let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 set showtabline=2 " 常にタブラインを表示
 
 autocmd QuickFixCmdPost *grep* cwindow
+hi MatchParen ctermbg=blue ctermfg=white

@@ -13,6 +13,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 set laststatus=2
 set mousemodel=popup
 set wildmenu
+set wildmode=list:longest
 
 "ノーマルモードの<C-^>を無効化
 nnoremap <silent> <C-^> <Nop>
